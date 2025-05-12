@@ -5,11 +5,15 @@ Author: Dhruv Saxena (Cambridge)
 # Getting started
 
 ```bash
-git clone https://github.com/CMBAgents/MCPAgents.git
+https://github.com/Pathlessbark8/RepoSurfer.git
 cd MCPAgents
 chmod +x installer.sh
-source installer.sh
-jupyter-lab
 ```
-
-You can the run the notebooks (make sure you select the mcp_env kernel in jupyter lab).
+Then execute the installer using:
+```bash
+source installer.sh
+```
+or
+```bash
+bash installer.sh
+```
