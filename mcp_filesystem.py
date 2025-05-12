@@ -43,8 +43,8 @@ def list_all_files(relative_path: str = "context_docs") -> List[str]:
     """
     path = (ROOT_DIR / relative_path).resolve()
     real_path = os.path.realpath(path)
-    # if not real_path.startswith(os.path.realpath(ROOT_DIR)):
-    #     return "Access denied"
+    if not real_path.startswith(os.path.realpath(ROOT_DIR)):
+        return "Access denied"
     if not path.exists():
         return [f"Path does not exist: {relative_path}"]
 
