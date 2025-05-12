@@ -1,10 +1,8 @@
-# Various agents and explorations with MCP and AG2
+# Agent Workflow to understand Github Repository 
 
-Authors: Licong Xu and Boris Bolliet (Cambridge)
+Author: Dhruv Saxena (Cambridge)
 
 # Getting started
-
-We recommend using Python 3.12 or 3.13.
 
 ```bash
 git clone https://github.com/CMBAgents/MCPAgents.git

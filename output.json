@@ -1,0 +1,7 @@
+{
+    "prefix": "Please base your answer to the following question only on the repository code",
+    "sulfix": "Feel free to elaborate in your response, explaiing your reasoning",
+    "user_prompt": "hello",
+    "repo_dir": null,
+    "memory": "Consider previous conversations when formulating your answer"
+}

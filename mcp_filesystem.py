@@ -36,6 +36,27 @@ def read_file(relative_path: str) -> str:
         return f"Not a file: {relative_path}"
     return path.read_text()
 
+@mcp.tool()
+def list_all_files(relative_path: str = "context_docs") -> List[str]:
+    """
+    Recursively list all files under ROOT_DIR/relative_path.
+    """
+    path = (ROOT_DIR / relative_path).resolve()
+    real_path = os.path.realpath(path)
+    # if not real_path.startswith(os.path.realpath(ROOT_DIR)):
+    #     return "Access denied"
+    if not path.exists():
+        return [f"Path does not exist: {relative_path}"]
+
+    all_files = []
+    for root, dirs, files in os.walk(path):
+        for file in files:
+            full_path = Path(root) / file
+            rel_path = full_path.relative_to(ROOT_DIR)
+            all_files.append(str(rel_path))
+    return all_files
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="MCP Filesystem Server")
     parser.add_argument(
